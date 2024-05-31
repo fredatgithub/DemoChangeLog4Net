@@ -62,8 +62,9 @@
       this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.logStandardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.logVerbeuxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.comboBoxchooseLog = new System.Windows.Forms.ComboBox();
+      this.comboBoxAppender = new System.Windows.Forms.ComboBox();
       this.labelChooseLog = new System.Windows.Forms.Label();
+      this.buttonAddToLog = new System.Windows.Forms.Button();
       this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -328,13 +329,14 @@
       this.logVerbeuxToolStripMenuItem.Text = "Log Verbeux";
       this.logVerbeuxToolStripMenuItem.Click += new System.EventHandler(this.LogVerbeuxToolStripMenuItem_Click);
       // 
-      // comboBoxchooseLog
+      // comboBoxAppender
       // 
-      this.comboBoxchooseLog.FormattingEnabled = true;
-      this.comboBoxchooseLog.Location = new System.Drawing.Point(50, 83);
-      this.comboBoxchooseLog.Name = "comboBoxchooseLog";
-      this.comboBoxchooseLog.Size = new System.Drawing.Size(195, 21);
-      this.comboBoxchooseLog.TabIndex = 1;
+      this.comboBoxAppender.FormattingEnabled = true;
+      this.comboBoxAppender.Location = new System.Drawing.Point(50, 83);
+      this.comboBoxAppender.Name = "comboBoxAppender";
+      this.comboBoxAppender.Size = new System.Drawing.Size(195, 21);
+      this.comboBoxAppender.TabIndex = 1;
+      this.comboBoxAppender.SelectedIndexChanged += new System.EventHandler(this.ComboBoxAppender_SelectedIndexChanged);
       // 
       // labelChooseLog
       // 
@@ -345,13 +347,24 @@
       this.labelChooseLog.TabIndex = 2;
       this.labelChooseLog.Text = "Choose your log";
       // 
+      // buttonAddToLog
+      // 
+      this.buttonAddToLog.Location = new System.Drawing.Point(324, 80);
+      this.buttonAddToLog.Name = "buttonAddToLog";
+      this.buttonAddToLog.Size = new System.Drawing.Size(75, 23);
+      this.buttonAddToLog.TabIndex = 3;
+      this.buttonAddToLog.Text = "Add to log";
+      this.buttonAddToLog.UseVisualStyleBackColor = true;
+      this.buttonAddToLog.Click += new System.EventHandler(this.ButtonAddToLog_Click);
+      // 
       // FormMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(428, 252);
+      this.Controls.Add(this.buttonAddToLog);
       this.Controls.Add(this.labelChooseLog);
-      this.Controls.Add(this.comboBoxchooseLog);
+      this.Controls.Add(this.comboBoxAppender);
       this.Controls.Add(this.menuStrip1);
       this.MainMenuStrip = this.menuStrip1;
       this.Name = "FormMain";
@@ -399,8 +412,9 @@
     private System.Windows.Forms.ToolStripMenuItem logToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem logStandardToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem logVerbeuxToolStripMenuItem;
-    private System.Windows.Forms.ComboBox comboBoxchooseLog;
+    private System.Windows.Forms.ComboBox comboBoxAppender;
     private System.Windows.Forms.Label labelChooseLog;
+    private System.Windows.Forms.Button buttonAddToLog;
   }
 }
 
